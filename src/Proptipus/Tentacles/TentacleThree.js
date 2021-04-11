@@ -1,31 +1,29 @@
 import React from "react";
 import tempImg from "../../images/SadFish.jpeg"
 
-function TentacleThree({ fishGiOhCard }){
+function TentacleThree(props) {
+  
+  const card = props.hatedFishGiOhCard;
 
-    return (
-      <div className="tentacle-three">
-      <span className="fish-name">
-          {/* Fish name goes here */}
-        </span>
+  return (
+    <div className="tentacle-three">
+      <span className="fish-name">{card.name}</span>
 
-        <img alt="fish" className="fish-image" 
-        src={ tempImg/* Fish image goes here */} 
-        />
+      <img
+        alt="fish"
+        className="fish-image"
+        src={card.image}
+      />
 
-        <span className="fish-type">
-          {/* Fish type goes here */}
-        </span>
+      <span className="fish-type">{card.type}</span>
 
-        <span className="fish-description">
-          {/* Fish description goes here */}
-        </span>
+      <span className="fish-description">
+        {card.description}
+      </span>
 
-        <span className="fish-attack">
-          {/* Fish attack goes here */}
-        </span>
-      </div>
-    );
+      <span className="fish-attack">{card.attack}</span>
+    </div>
+  );
 }
 
 export default TentacleThree;

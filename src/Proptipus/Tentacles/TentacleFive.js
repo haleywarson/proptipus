@@ -1,4 +1,5 @@
 import React from "react";
+// import TentacleSix from "./TentacleSix.js";
 
 class TentacleFive extends React.Component {
 
@@ -11,9 +12,9 @@ class TentacleFive extends React.Component {
       <span className="magic-remote-text">Remote</span>
       <br/>
       <button className="magic-remote-button color-1" 
-      onClick={null /* Decrement function goes here */}>-</button>
+      onClick={this.props.decrementNumber}>-</button>
       <button className="magic-remote-button color-2" 
-      onClick={null /* Increment function goes here */}>+</button>
+      onClick={this.props.incrementNumber}>+</button>
       <br/>
       </div>
     );
